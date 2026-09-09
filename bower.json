@@ -1,0 +1,17 @@
+{
+  "name": "aaxim",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "susantstha5 <lxstha5@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
