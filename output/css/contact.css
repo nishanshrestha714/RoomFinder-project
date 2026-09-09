@@ -1,0 +1,684 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-size: cover;
+    overflow-x: hidden;
+}
+.class
+{
+    position: absolute;
+    margin-top: 120px;
+    height: 100vh;
+    width:100%;
+    align-items: center;
+    flex-direction: column;
+ 
+
+}
+
+.contact-container {
+    position: relative;
+    height: auto;
+    width: 100%;
+    top: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+   
+   
+    
+}
+
+.contact-contain {
+    position: relative;
+    margin-left: 100px;
+    max-width: 350px;
+    margin-top: 20px;
+    padding: 40px;
+
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 25px;
+    transform: translatex(10px);
+    
+
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 7px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 7px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 7px;
+    background-color: white;
+    box-sizing: border-box;
+
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+
+}
+
+.box textarea {
+    width: 100%;
+    padding: 5px;
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.box textarea:focus {
+    border-color: skyblue;
+    outline: auto;
+
+
+
+}
+
+.submit-btn {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: 3px solid black;
+    border-radius: 13px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 17%;
+    width: 65%;
+    z-index: 100px;
+    margin-left: 45px;
+    margin-top: 13px;
+}
+
+.submit-btn:hover {
+    background-color: white;
+    z-index: 100px;
+    background-color: black;
+    color: white;
+}
+
+.contact {
+    position: relative;
+    height: 350px;
+    width: 325px;
+    margin-left: 70px;
+    margin-top: 40px;
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: #0e3959;
+
+
+}
+
+.contact h3 {
+    margin-left: 10px;
+    color: aliceblue;
+}
+
+/*all div in contact page*/
+.contact .infobox div {
+    position: relative;
+    display: flex;
+    text-align: center;
+    margin-bottom: 10px;
+
+
+}
+
+/* .contact .infobox div ion-icon{ 
+min-width: 40px;
+height: 40px;
+background-color: blue;
+color: aliceblue;
+display: flex;
+justify-content: center;
+text-align: center;
+font-size: 1.5em;
+border-radius: 50%;
+margin-left: 9px;
+} */
+.contact .infobox div span {
+    min-width: 30px;
+    height: 30px;
+    background-color: rgb(25, 25, 208);
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7em;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-top: 17px;
+}
+
+.contact .infobox div p {
+
+    position: relative;
+    margin-top: 17px;
+    color: white;
+    font-size: 1.1em;
+}
+
+.contact .infobox div a {
+    position: relative;
+    margin-top: 17px;
+    color: aliceblue;
+    text-decoration: none;
+
+}
+
+.social {
+    position: relative;
+    display: flex;
+    margin: 40px;
+}
+
+.social div {
+    position: relative;
+    list-style: none;
+    margin-right: 35px;
+    margin-bottom: 100px;
+    font-size: 30px;
+
+}
+
+.social div a {
+    color: aliceblue;
+    font-size: 36px;
+
+}
+
+.social div a:hover {
+    color: blue;
+
+}
+
+.map {
+    position: relative;
+    height: 350px;
+    width: 325px;
+    margin-top: 40px;
+    border: 2px solid black;
+    border-radius: 13px;
+    margin-right: 50px;
+    padding: 0px;
+    background: cover;
+
+}
+
+.map iframe {
+    height: 100%;
+    width: 100%;
+    border-radius: 13px;
+
+
+}
+
+
+@media only screen and (max-width: 1200px) {
+ 
+.contact-container{
+    position: relative;
+   height: auto;
+   margin: 10px auto;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+.contact-contain {
+   
+}
+.contact{
+
+}
+.social {
+
+}
+.contact .infobox div span {
+
+}
+.contact .infobox div p, .contact .infobox div a {
+
+}
+    
+    
+
+    .map {
+        position: relative;
+       margin-top: 20px;
+       margin-left: 15px;
+        height: 400px;
+        width: 100%;
+        flex-direction: column;
+        white-space: nowrap;
+        
+
+
+    }
+}
+
+
+
+
+@media only screen and (max-width: 900px) {
+
+  
+
+    .contact-contain,
+    .contact {
+        position: relative;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social {
+
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: nowrap;
+    }
+
+    .social div {
+        margin-top: 40px;
+        margin: 10px auto;
+        font-size: 30px;
+    }
+    .map {
+        position: relative;
+       margin-top: 20px;
+       margin-left: 15px;
+        height: 400px;
+        width: 100%;
+        flex-direction: column;
+        white-space: nowrap;
+        
+    }
+
+
+
+}
+@media only screen and (max-width: 900px) {
+    .contact-contain,
+    .contact {
+        position: relative;
+        margin: 40px auto;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 770px) {
+    .menu-toggle {
+        display: block; 
+    }
+
+    .navigation {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navigation.active {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        margin-right: 2em;
+        background-color: aqua;
+    }
+    .navigation a.one {
+        display: block; /* Ensure links are block elements */
+        width: 100%;
+        color: white;
+    }
+
+    .navigation a.one::after {
+        width: 50%; /* Make underline shorter in mobile view */
+        margin: auto; /* Center the underline */
+    }
+    .navigation a {
+        display: block;
+        padding: 12px;
+        width: 100%;
+    }
+} 
+
+@media only screen and (max-width: 600px) {
+
+
+    .contact-contain,
+    .contact {
+        position: relative;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .social {
+
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: nowrap;
+    }
+
+    .social div {
+        margin-top: 40px;
+        margin: 10px auto;
+        font-size: 30px;
+    }
+    .map {
+        position: relative;
+       margin-top: 20px;
+       margin-left: 15px;
+        height: 400px;
+        width: 100%;
+        flex-direction: column;
+        white-space: nowrap;
+        
+
+
+    }
+
+
+}
+
+.footer-container {
+    position: absolute;
+    /* background-color: blue; */
+    background-color: rgb(232, 224, 224);
+    background-color: rgb(155, 153, 153);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: inherit;
+    width: 100%;
+    top: 200%;
+    align-items: flex-start;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+}
+
+.about_page {
+    position: relative;
+    min-height: 250px;
+    width: 300px;
+    padding: 30px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    /* box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); */
+    box-sizing: border-box;
+    text-align: left;
+    transition: 0.8s;
+
+}
+
+.about_page h2 {
+    position: relative;
+    color: rgb(219, 212, 212);
+    text-align: left;
+    padding-left: 5px;
+    white-space: nowrap;
+}
+
+.about_page p {
+    position: relative;
+    font-size: 15px;
+    transition: 0.9s;
+
+}
+
+.contacts {
+    position: relative;
+    min-height: 250px;
+    width: 300px;
+    padding: 20px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    /* box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); */
+    box-sizing: border-box;
+    text-align: left;
+    transform: translatex(-10px);
+    transition: 0.8s;
+
+
+}
+
+.contacts h3 {
+    position: relative;
+    color: rgb(228, 228, 228);
+    text-align: left;
+    padding-left: 5px;
+    font-size: 1.5em;
+    white-space: nowrap;
+}
+
+.contacts .info-box div {
+    position: relative;
+    display: flex;
+    text-align: center;
+    margin-bottom: 30px;
+    top: 10px;
+
+
+}
+
+.contacts .info-box div span {
+    position: relative;
+    min-width: 30px;
+    height: 30px;
+    color: rgb(10, 60, 105);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7em;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.contacts .info-box div p {
+    position: relative;
+    color: black;
+    font-size: 1.1em;
+}
+
+.contacts .info-box div a {
+    position: relative;
+    color: black;
+    font-size: 1em;
+    text-decoration: none;
+
+}
+
+.quick_link {
+    position: relative;
+    min-height: 250px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    /* box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); */
+    box-sizing: border-box;
+    text-align: left;
+    transition: 0.8s;
+
+}
+
+.quick_link h2 {
+    position: relative;
+    color: rgb(232, 223, 223);
+    text-align: left;
+    top: 10px;
+    padding-left: 5px;
+    font-size: 1.5em;
+    white-space: nowrap;
+
+}
+
+.quick_link li {
+    position: relative;
+    list-style-type: none;
+    padding: 5px;
+
+}
+
+.quick_link a {
+    position: relative;
+    color: rgb(35, 1, 1);
+    text-decoration: none;
+
+}
+
+.follow_us {
+    position: relative;
+    min-height: 250px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: left;
+    transition: 0.8s;
+
+
+}
+
+.follow_us h2 {
+    position: relative;
+    color: rgb(245, 236, 236);
+    text-align: left;
+    top: 10px;
+    padding-left: 5px;
+    font-size: 1.5em;
+    white-space: nowrap;
+
+
+}
+
+.follow_us .row {
+    position: relative;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    top: 0;
+    padding: 10px;
+    gap: 25px;
+    margin-top: 10px;
+    font-size: 25px;
+
+
+
+}
+
+@media(max-width:1200px) {
+    .footer-container {
+        margin: 10px auto;
+        width: 100vw;
+        height: auto;
+        margin: 5px auto;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+    }
+
+    .follow_us .row a:hover {
+        color: rgb(116, 116, 243);
+    }
+}
+
+@media (max-width:1100px) {
+    .footer-container {
+        width: 100vw;
+        flex-wrap: wrap;
+        height: auto;
+        margin: 5px auto;
+        overflow-x: hidden;
+    }
+
+    .follow_us .row a:hover {
+        color: rgb(116, 116, 243);
+    }
+
+}
+
+@media (max-width:700px) {
+    .footer-container{
+       position: relative;
+        height: auto;
+        margin-top:400px;
+        white-space: wrap;
+       
+        overflow-x: hidden;
+    }
+
+   
+}
+@media (max-width:654px) {
+    .footer-container{
+        height: auto;
+        white-space: wrap;
+        margin: 5px auto;
+        top: 400px;
+        overflow-x: hidden;
+    }
+}

@@ -1,0 +1,936 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.lists-image {
+    position: relative;
+    min-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    overflow-x: hidden;
+
+}
+
+.lists-image .heading {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.lists-image h1 {
+    position: relative;
+    font-size: 40px;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+.container-image {
+    position: relative;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    gap: 20px;
+    flex-wrap: wrap;
+    color: black;
+    
+
+
+}
+
+.container-image .image-detail {
+    position: relative;
+    height: 480px;
+    width: 400px;
+    margin-top: 30px;
+    gap: 20px;
+    background-color: rgb(209, 240, 240);
+    border: 2px solid rgb(22, 18, 18);
+    border-radius: 12px;
+    /* display: flex; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+
+}
+
+.container-image .image-detail h1 {
+    position: relative;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+   
+    
+}
+.image-detail .contac{
+    position: relative;
+    width: 100%;
+    height: auto;
+   
+}
+.image-detail .contac p {
+    position: relative;
+    font-size: 17px;
+    margin-top: -4px;
+    font-weight: 300;
+    text-align: left;
+    margin-left: 7px;
+    
+}
+
+.image-detail .owner-details{
+    position: relative;
+    min-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    flex-direction: column;
+    color: black;
+    overflow-x: hidden;
+}
+.owner-details .head {
+    position: relative;
+    margin-top: -10px;
+    margin-bottom: 3px;
+    text-align: left;
+    margin-left: 10px;
+  
+
+}
+.owner-details  .head h2 {
+    position: relative;
+    font-size: 20px;
+    margin-top: 5px;
+    font-weight: 300;
+    text-align: left;
+    left: 0;
+    flex-wrap: nowrap;
+    color: rgb(19, 20, 19);
+}
+
+.owner-details .users {
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    gap: 10px;
+    flex-wrap: wrap;
+    color: black;
+   
+}
+
+.owner-details .users .users-details {
+    position: relative;
+    height: 30px;
+    width: 150px;
+    margin-left: 10px;
+    margin-top: 1px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(238, 246, 246);
+    border: 1px solid rgb(15, 15, 15);
+    border-radius: 6px;
+    
+}
+
+.owner-details .users .users-details  p {
+     margin-left: 10px;
+     margin-top: 5px;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+.image-detail .submit-box {
+    position: relative;
+    margin-top: 20px;
+    height: auto;
+    width: 100%;
+   
+
+}
+
+.image-detail .submit-box .heading {
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+  
+
+
+
+}
+
+.image-detail .submit-box .heading h1 {
+    position: relative;
+    font-size: 17px;
+    margin-top: 15px;
+    font-weight: 300;
+    text-align: center;
+   
+}
+
+.image-detail .submit-box .price {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 7px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.image-detail .submit-box .price p {
+    font-size: 18px;
+    color: red;
+}
+
+.image-detail .submit-box .buttom {
+    position: relative;
+    margin-left: 290px;
+    width: 100px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 13px;
+    top: 2px;
+    height: 30px;
+    background-color: rgb(51, 17, 202);
+}
+
+.image-detail .submit-box .buttom:hover {
+    background-color: rgb(100, 67, 247);
+    color: black;
+}
+
+.image-detail .submit-box .buttom a {
+    position: absolute;
+    white-space: nowrap;
+    margin-top: 5px;
+    margin-left: -28px;
+    color: aliceblue;
+    text-decoration: none;
+}
+.image-detail .submit-box .buttom a:hover{
+    color: black;
+} 
+
+
+.lists-image .all-sections {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+   
+
+}
+
+.lists-image .over {
+    position: relative;
+    width: 600px;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    overflow-x: hidden;
+    left: 0;
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: rgb(209, 240, 240);
+    
+
+
+
+
+}
+
+.lists-image .over .heading {
+    position: relative;
+    margin-bottom: 20px;
+
+}
+
+.lists-image .over .heading h1 {
+    position: relative;
+    font-size: 40px;
+    margin-top: 5px;
+    font-weight: 300;
+
+}
+
+.lists-image .over .heading p {
+    position: relative;
+    font-size: 17px;
+    margin-top: 5px;
+    font-weight: 300;
+    text-align: left;
+    margin-left: 7px;
+}
+
+.container-details {
+    position: relative;
+    min-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    overflow-x: hidden;
+
+}
+
+.container-details .head {
+    position: absolute;
+    margin-bottom: 5px;
+    text-align: left;
+    margin-left: 7px;
+    top: 5px;
+    left: 0;
+    margin-left: 10px;
+
+}
+
+.container-details .head h2 {
+    position: relative;
+    font-size: 20px;
+    margin-top: 5px;
+    font-weight: 300;
+    text-align: left;
+    left: 0;
+    flex-wrap: nowrap;
+    color: rgb(19, 20, 19);
+}
+
+.container-details .contains {
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    gap: 10px;
+    flex-wrap: wrap;
+    color: black;
+}
+
+.container-details .contains .detail {
+    position: relative;
+    height: 30px;
+    width: 200px;
+    margin-left: 10px;
+    margin-top: 1px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 246, 246);
+    border: 1px solid rgb(15, 15, 15);
+}
+
+.container-details .contains .detail p {
+    margin-top: 5px;
+}
+
+.all-sections .contact-information {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 12px;
+    gap: 10px;
+  
+
+
+}
+.all-sections .contact-information .owners{
+position: relative;
+
+}
+.contact-information .owners .heading{
+    position: relative;
+    margin-bottom: 5px;
+    text-align: left;
+    margin-left: 7px;
+    top: 5px;
+    left: 0;
+    margin-left: 10px;
+    flex-wrap: nowrap;
+}
+.contact-information .owners .heading h1{
+    position: relative;
+    font-size: 20px;
+    margin-top: 5px;
+    font-weight: 300;
+    text-align: left;
+    left: 0;
+    flex-wrap: nowrap;
+    color: rgb(19, 20, 19);
+}
+
+.all-sections .contact-information .contain-information {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(216, 219, 223, 0.354);
+}
+.contact-information .contain-information p{
+    position: relative;
+    color: rgb(27, 28, 28);
+    padding: 7px;
+    font-size: 17px;
+}
+
+.contact-information .contact-container {
+    width: 394px;
+    height: 420px;
+  
+    padding: 20px;
+    margin-top: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.contact-container  .form-group {
+    margin-bottom: 15px;
+}
+.contact-container  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.contact-container  .form-group input  {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-group textarea {
+    width: 100%;
+    height: 100px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+.contact-container  .form-group  a{
+    position: relative;
+    width: 80px;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 20px;
+    background: rgb(115, 115, 234);
+    color: rgb(16, 16, 16);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-container  .form-group  a:hover{
+    background: blue;
+    color: aliceblue;
+
+}
+
+
+.image-slider {
+    position: relative;
+    width: 700px;
+    height: 450px;
+    justify-self: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 30px;
+    border-radius: 12px;
+    border: 1px solid black;
+}
+
+.slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.slides img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 4s ease;
+    overflow: hidden;
+    display: none;
+
+}
+
+.slides img.active {
+    display: block;
+
+
+}
+
+.prev,
+.next {
+    position: relative;
+    margin-top: 35%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.prev {
+    position: absolute;
+    color: white;
+    left: 10px;
+}
+
+.next {
+    position: absolute;
+    color: white;
+    right: 10px;
+}
+
+.dots {
+    position: relative;
+    text-align: center;
+    margin-top: 410px;
+
+}
+
+.dot {
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-top: 0px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 43px;
+}
+
+.dot.active {
+    background-color: #560de7;
+}
+
+@media(max-width:1200px){
+    .lists-image
+    {
+        padding: 25px;
+    }
+    .lists-image .heading{
+        position: relative;
+        margin-bottom: 20px;
+        text-align: center;
+        justify-content: center;
+    }
+    .container-image {
+        position: relative;
+        height: auto;
+        width: 100%; 
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
+    .container-image .image-slider{
+        position: relative;
+        /* width: 700px;
+        height: 450px; */
+        justify-self: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-left: 30px;
+        border-radius: 12px;
+        border: 1px solid black;
+    }
+    
+    .image-detail{
+        position: relative;
+        height: 480px;
+        width: 400px;
+        margin-top: 30px;
+        gap: 20px;
+        border-radius: 12px;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .image-detail .heading{
+      h1{
+        color: black;
+      }
+    }
+    .image-detail  .contac {
+        p{
+            color: black;
+        }
+
+    }
+    .image-detail   .owner-details{
+
+        h2{
+            color: black;
+        }
+    }
+    .owner-details .head{
+        h2{
+            color: black;
+        
+        }
+
+    }
+    .owner-details .users{
+        p{
+            color: black;
+        }
+
+    }
+    .owner-details  .users-details{
+        p{
+         color: black;
+        }
+
+    }
+
+    
+}
+
+
+
+@media(max-width:600px){
+    
+    .contact-information
+{
+ position: relative;
+    width: 200px;
+    height: 400px;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 12px;
+    gap: 10px;
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.container-image .owner-details {
+    position: relative;
+    height: 30px;
+    width: 130px;
+    margin-top: 10px;
+    gap: 1px;
+    border: 2px solid red;
+    border-radius: 12px;
+    background-color: aqua;
+}
+
+.container-image .suitable h1 {
+    position: relative;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 5px;
+
+}
+
+.container-image .suitable .contain {
+    position: relative;
+    height: 30px;
+    width: 130px;
+    margin-left: 10px;
+    margin-top: 1px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 246, 246);
+    border: 1px solid rgb(15, 15, 15);
+}
+
+.container-image .suitable .contain p {
+    margin-top: 5px;
+
+}
+
+.container-image .preferences-for {
+    position: relative;
+    min-width: 100%;
+    height: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    overflow-x: hidden;
+}
+
+.preferences-for .heading {
+    position: absolute;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 7px;
+    left: 0;
+
+}
+
+.preferences-for .heading h1 {
+    position: relative;
+    font-size: 18px;
+    margin-top: 5px;
+    font-weight: 300;
+    text-align: left;
+
+}
+
+.preferences-for .preferences {
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: nowrap;
+    color: black;
+
+}
+
+.preferences-for .preferences .single-room,
+.preferences-for .preferences .student-room {
+    position: relative;
+    height: 30px;
+    width: 180px;
+    margin-left: 10px;
+    margin-top: 1px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 246, 246);
+    border: 1px solid rgb(15, 15, 15);
+}
+
+.preferences-for .preferences .single-room p,
+.preferences-for .preferences .student-room p {
+    margin-top: 5px;
+}
+
+.container-image .facilites-features {
+    position: relative;
+    min-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    overflow-x: hidden;
+}
+
+.container-image .facilites-features .heading {
+    position: absolute;
+    margin-bottom: 55px;
+    text-align: left;
+    margin-left: 7px;
+    left: 0;
+}
+
+
+.container-image .facilites-features .heading h1 {
+    position: relative;
+    font-size: 18px;
+    margin-top: 5px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.container-image .facilites-features .facilites {
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    gap: 10px;
+    flex-wrap: wrap;
+    color: black;
+}
+
+.facilites-features .facilites .feature {
+    position: relative;
+    height: 30px;
+    width: 180px;
+    margin-left: 10px;
+    margin-top: 1px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 246, 246);
+    border: 1px solid rgb(15, 15, 15);
+
+}
+
+.image-detail .submit-box {
+    position: relative;
+
+    top: 0;
+    height: auto;
+    width: 100%;
+
+}
+
+.image-detail .submit-box .heading {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.image-detail .submit-box .heading h1 {
+    position: relative;
+    font-size: 16px;
+    margin-top: 5px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.image-detail .submit-box .price {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-detail .submit-box .price p {
+    font-size: 16px;
+    color: red;
+}
+
+.image-detail .submit-box .buttom {
+    position: absolute;
+    margin-left: 290px;
+    width: 100px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 13px;
+    top: 27px;
+    height: 30px;
+    background-color: rgb(51, 17, 202);
+}
+
+.image-detail .submit-box .buttom:hover {
+    background-color: rgb(100, 67, 247);
+}
+
+.image-detail .submit-box .buttom a {
+    position: absolute;
+    white-space: nowrap;
+    margin-top: 5px;
+    margin-left: -28px;
+    color: aliceblue;
+    text-decoration: none;
+} */

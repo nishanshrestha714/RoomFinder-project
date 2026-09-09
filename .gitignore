@@ -7,9 +7,6 @@ yarn-error.log*
 package-lock.json
 npm-shrinkwrap.json
 tests/**/coverage/
-
-/output
-
 # Editor directories and files
 .idea
 .vscode

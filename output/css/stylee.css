@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: border-box;
+    font-family: Poppins, sans-serif;
+    font-family: "Poppins", serif;
+    box-sizing: border-box;
+
+}
+
+body {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 100;
+    overflow-y: scroll;
+
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    background-color: transparent;
+    border: 0px solid black;
+
+}
+
+nav {
+    display: inline;
+    margin-right: 60px;
+
+
+}
+
+.logo {
+    height: 55px;
+    width: 130px;
+    background-image: url(/output/image/rnr.jpg);
+    background-position: center;
+    background-size: cover;
+    font-size: 2rem;
+    color: black;
+    size: 10px;
+
+
+}
+.logo img{
+    object-fit: cover;
+    width: 10px;
+    width: 10px;
+}
+
+.navigation a.one {
+    position: relative;
+    font-size: 1.2rem;
+    color: #162938;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+
+}
+.navigation a.one::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background:#162938;
+    border-radius: 3px;
+    left: 0;
+    bottom: -6px;
+    transform-origin: between;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a.one:hover::after {
+    transform: scaleX(1);
+}
+
+
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 770px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navigation.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2em;
+        background-color: aqua;
+    }
+
+    .navigation a.one {
+        display: block;
+        /* Ensure links are block elements */
+        width: 100%;
+        color: white;
+    }
+
+    .navigation a.one::after {
+        width: 50%;
+        /* Make underline shorter in mobile view */
+        margin: auto;
+        /* Center the underline */
+    }
+
+    .navigation a {
+        display: block;
+        padding: 12px;
+        width: 100%;
+    }
+}
+
+
+
+.btnlogin-popup {
+    width: 120px;
+    height: 50px;
+    color: #162938;
+    background: transparent;
+    border: 2px solid #162938;
+    outline: none;
+    ;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    transition: .5s;
+
+}
+
+.btnlogin-popup:hover {
+    background-color: white;
+    color: #162938;
+
+}
+
+
+
+.warper {
+    position: relative;
+    width: 350px;
+    height: 440px;
+    top: 100px;
+    background: transparent;
+    border: 2px solid rgb(239, 221, 221);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    margin-left: 400px;
+    transition: 0.2s;
+    z-index: 2;
+
+}
+
+.warper.active-popup {
+    transform: scale(0.91);
+}
+
+.warper .ion {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: -1;
+    transition: transform height 0.25s ease;
+
+
+}
+
+.warper.active {
+    height: 480px;
+}
+
+.from-box {
+    text-align: center;
+
+}
+
+.warper .from-box.login {
+    transition-duration: .25s;
+    width: 100%;
+    padding: 40px;
+    transform: translateX(0px);
+    z-index: 55;
+
+}
+
+.warper.active .from-box.register {
+    transform: 0;
+    transition-duration: 0.25s;
+    position: absolute;
+    transform: translateX(0);
+    padding: 40px;
+    z-index: 55;
+}
+
+.warper.active .from-box.login {
+    width: 100%;
+    padding: 40px;
+    transform: translateX(-440px);
+    z-index: 55;
+}
+
+
+.warper .from-box.register {
+    position: absolute;
+    transform: translateX(400px);
+    padding: 40px;
+    z-index: 55;
+}
+
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+
+
+}
+
+.input-box label {
+    position: absolute;
+    top: 50px;
+    left: 5px;
+    transform: translateY(-275%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0px;
+
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+}
+
+.remember-forgot {
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.remember-forgot label input {
+    accent-color: #162938;
+    margin-right: 3px;
+
+}
+
+.remember-forgot a {
+    color: #162938;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.bot {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 4px;
+
+}
+
+.login-register {
+    font-size: 0.9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500px;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+
+#welcome {
+    position: relative;
+    top: 150px;
+    height: 300px;
+    width: 600px;
+    left: 27%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    color: black;
+    transform: none;
+    background-color: transparent;
+    animation: welcome_box 1s ease-in;
+}
+
+@keyframes welcome_box {
+    0% {
+        scale: 0;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+#welcome .welcoming_text {
+    font-size: 2.2rem;
+}
+
+.bichho {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.welcome+.warper.active-popup {
+    display: hidden;
+    transform: scale(0);
+}
+
+.btnlogin-popup:active-popup+.welcome {
+    display: hidden;
+    transform: scale(0);
+}
+
+
+@media (max-width: 1100px) {
+    #welcome {
+        position: relative;
+        top: 150px;
+        height: 350px;
+        width: 600px;
+        left: 20%;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+        color: black;
+        transform: none;
+        background-color: transparent;
+        animation: welcome_box 1s ease-in;
+    }
+    .warper{
+        position: relative;
+    width: 400px;
+    height: 500px;
+    top: 200px;
+    background: transparent;
+    border: 2px solid rgb(239, 221, 221);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    overflow: hidden;
+    transform: scale(0);
+    margin-left: 200px;
+    transition: 0.2s;
+    z-index: 2;
+    }
+    .warper.active .from-box.login h2{
+        font-size: 30px;
+    }
+    #welcome .welcoming_text {
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width: 700px) {
+    #welcome {
+        position: relative;
+        top: 150px;
+        height: 300px;
+        width: 400px;
+        margin-left: 10px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+        color: black;
+        transform: none;
+        background-color: transparent;
+        animation: welcome_box 1s ease-in;
+    }
+    .warper{
+        position: relative;
+    width: 400px;
+    height: 500px;
+    top: 200px;
+    background: transparent;
+    border: 2px solid rgb(239, 221, 221);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    overflow: hidden;
+    transform: scale(0);
+    margin-left: 10px;
+    transition: 0.2s;
+    z-index: 2;
+    }
+    #welcome .welcoming_text {
+        font-size: 1.5rem;
+    }
+
+}
+@media (max-width: 550px) {
+    #welcome {
+        position: relative;
+        top: 200px;
+        height: 200px;
+        width: 300px;
+        margin-left: -30px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+        color: black;
+        transform: none;
+        background-color: transparent;
+        animation: welcome_box 1s ease-in;
+    }
+    #welcome .welcoming_text {
+        font-size: 1.2rem;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav{
+    display: inline;
+    margin-right: 0px;
+    overflow: hidden;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 770px) {
+    .menu-toggle {
+        display: block; 
+    }
+
+    .navigation {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navigation.active {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        margin-right: 2em;
+        background-color: aqua;
+    }
+    .navigation a.one {
+        display: block; /* Ensure links are block elements */
+        width: 100%;
+        color: white;
+    }
+
+    .navigation a.one::after {
+        width: 50%; /* Make underline shorter in mobile view */
+        margin: auto; /* Center the underline */
+    }
+    .navigation a {
+        display: block;
+        padding: 12px;
+        width: 100%;
+    }
+} 
+
+

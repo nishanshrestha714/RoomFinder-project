@@ -1,0 +1,193 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/stylee.css">
+    
+    <body>
+    <div id="welcome">
+            <h1 class="welcoming_text">Welcome to the login page!</h1>
+            <h2 class="welcoming_text">Let's Get started !</h2>
+            <button class="btnlogin-popup">Login </button>
+    </div>
+    <header>
+        <h2 class="logo"></h2>
+
+        <nav class="navigation">
+
+            <a href="index.php" class="one">Home</a>
+            <a href="about-us.php" class="one">About</a>
+            <a href="seervices.php" class="one">Services</a>
+            <a href="contact.php" class="one">Contact</a>
+            <a href="login.php" class="one">Login</a>
+        </nav>
+        <div class="menu-toggle"><i class="fa-solid fa-bars "></i></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const menuToggle = document.querySelector(".menu-toggle");
+                const menu = document.querySelector(".navigation");
+                const too = document.querySelector(".navigation a.one:hover::after");
+
+
+                menuToggle.addEventListener("click", () => {
+                    menu.classList.toggle("active");
+                    too.style.transform = "scaleX(0)";
+                });
+            });
+
+        </script>
+    </header>
+    
+    <div class="warper">
+        <span class="ion"><i class="fa-solid fa-xmark"></i></span>
+        <div class="from-box login">
+            <h2>Login</h2>
+            <form action="login.php" method="POST">
+                <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" required name="email">
+                <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" required name="password">
+                    <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">Remember me</label>
+                        <a href="#" class="noeffect">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="bot" name="login">Login</button>
+                    <div class="login-register">
+                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                    </div>
+            </form>
+        </div>
+
+ 
+        <div class="from-box register">
+            <h2>Registration</h2>
+            <form action="login.php" method="POST">
+                <div class="input-box">
+                    <span class="icon">
+                        
+                        <i class="fa-solid fa-user"></i></span>
+                    <input type="username" required name="username">
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" required name="eemail">
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" required name="pass">
+                    <label>Password</label>
+                </div> 
+                     <div class="remember-forgot">
+                        <label><input type="checkbox">I agree the terms and conditions</label>
+                
+                        <a href="#" class="noeffect"></a>
+                    </div>
+                    <button type="submit" class="bot" name="register">register</button>
+                    <div class="login-register">
+                        <p>Already have an account? <a href="#"class="login-link">Login</a></p>
+                    </div>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="/output/js/script.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
+
+<?php
+// Must be at the very top, before any HTML output
+
+$Host='localhost';
+$Username='root';
+$Password='';
+$Dbname='login';
+$conn= new mysqli($Host,$Username,$Password,$Dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if(isset($_POST['register'])){
+    $user = $_POST['username'] ?? '';
+    $Email = $_POST['email'] ?? '';
+    $Password = $_POST['password'] ?? '';
+    // $user = '123';
+    // $Email = '12@gmail.com';
+    // $Password = '123';
+    
+    if (!empty($Email) && !empty($Password)) {
+        $Password = password_hash($Password, PASSWORD_DEFAULT);
+
+        $check = "SELECT * FROM store WHERE email='$Email'";
+        $result = $conn->query($check);
+
+        if ($result->num_rows > 0) {
+            echo "Email already exists!";
+        } else {
+            $insert = "INSERT INTO store(username, email, password) VALUES('$user', '$Email', '$Password')";
+            if ($conn->query($insert) === TRUE) {
+                echo "Registration successful!<br>";
+                
+            } else {
+                echo "Error: " . $conn->error;
+            }
+        }
+    } else {
+        echo "Please fill in all fields.";
+    }
+}
+
+if (isset($_POST['login'])) {
+    $Email = $_POST['email'] ?? '';
+    $Password_input = $_POST['password'] ?? '';
+
+    if (!empty($Email) && !empty($Password_input)) {
+        // Correct query: fetch the hashed password from the database
+        $query = "SELECT * FROM store WHERE email=?";
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param("s", $Email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            $user = $result->fetch_assoc();
+
+            // Debugging: Check if the password hash is retrieved correctly
+            echo "Stored Hashed Password: " . $user['password'] . "<br>";
+
+            // if (password_verify($Password_input, $user['password'])) {
+            if(($Password_input === $user['password'])){
+                // Successful login
+                // session_start();
+                //
+                $_SESSION['username'] = $user['username'];
+                echo "Login successful!";
+                exit();
+            } else {
+                echo "Invalid.";
+            }
+        } else {
+            echo "No user found with that email.";
+        }
+    } else {
+        echo "Please enter both email and password.";
+    }
+}
+?>
